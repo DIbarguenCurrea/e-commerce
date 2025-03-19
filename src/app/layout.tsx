@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Ubuntu, Ubuntu_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const geistSans = Ubuntu({
+  variable: "--font-ubuntu-sans",
+  weight: ["300", "400", "500", "700"], // Usar 300 light, 400 regular, 500 medium, 700 bold
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistMono = Ubuntu_Mono({
+  variable: "--font-ubuntu-mono",
+  weight: ["400", "700"], // Usar 400 regular, 700 bold
   subsets: ["latin"],
 });
 
