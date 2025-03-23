@@ -1,11 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import MenuBurger from "./MenuBurger";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 
 function Navbar() {
   return (
     <header className="flex items-center justify-between px-6 py-4">
+
+      <div className="flex md:hidden">
+        <MenuBurger />
+      </div>
 
       <div className="text-lg font-bold hover:text-[#D9CAB3] duration-200 cursor-pointer">
         <h1>
@@ -13,7 +18,7 @@ function Navbar() {
         </h1>
       </div>
 
-      <nav className="items-center space-x-6 font-semibold md:flex">
+      <nav className="items-center hidden space-x-6 font-semibold sm:flex">
         <ul className="flex space-x-4">
           <li className="border-b-2  hover:text-[#555050c0] duration-200 cursor-pointer ">
             <Link href="/home">Home</Link>
@@ -23,6 +28,7 @@ function Navbar() {
           </li>
         </ul>
       </nav>
+
 
       <div>
         <Link href="/cart">

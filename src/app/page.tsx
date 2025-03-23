@@ -1,8 +1,6 @@
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
-import HomePage from "@/app/pages/home/homePage";
-
-
+import Landing from "./pages/landing/Landing";
 
 export default function Home() {
   return (
@@ -11,7 +9,7 @@ export default function Home() {
         <Navbar />
       </header>
       <main>
-        <HomePage />
+        <Landing />
       </main>
       <footer>
         <Footer />
