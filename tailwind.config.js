@@ -1,17 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+import flowbite from "flowbite/plugin";
 
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  safelist: [
-    "tham",
-    "tham-e-squeeze",
-    "tham-w-6",
-    "tham-active",
-    "tham-box",
-    "tham-inner",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
@@ -21,5 +15,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [flowbite],
 };

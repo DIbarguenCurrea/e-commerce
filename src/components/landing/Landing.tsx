@@ -1,4 +1,4 @@
-import CategoryCard from '@/components/categoryCard/CategoryCard'
+import CategoryCard from '@/components/category/categoryCard/CategoryCard'
 import React from 'react'
 
 function Landing() {

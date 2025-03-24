@@ -4,7 +4,7 @@ import { categoriesToPreLoad } from '@/app/utils/preLoadData'
 
 function CategoryCard() {
   return (
-    <section className='px-4 py-8'>
+    <section className='hidden px-4 py-8 md:block'>
       <h2 className='text-2xl font-bold'>Categories</h2>
       <div className="grid grid-cols-4 gap-6 mt-6 md:grid-cols-3 lg:grid-cols-9">
         {categoriesToPreLoad.map((category, index) => (
