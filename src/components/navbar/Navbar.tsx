@@ -1,11 +1,16 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import CategoryMegaMenu from "../category/categoryMegaMenu/CategoryMegaMenu";
+import { usePathname } from "next/navigation";
 
 
 function Navbar() {
+
+  const pathname = usePathname();
+
   return (
     <header className="flex items-center justify-between px-2 py-4 md:px-8 md:py-6 ">
 
@@ -17,11 +22,11 @@ function Navbar() {
 
       <nav className="items-center space-x-6 font-semibold sm:flex">
         <ul className="flex space-x-4">
-          <li className="border-b-2  hover:text-[#555050c0] duration-200 cursor-pointer ">
+          <li className={`hover:text-[#555050c0] duration-200 cursor-pointer ${pathname === "/" ? "border-b-2" : ""}`}  >
             <Link href="/">Home</Link>
           </li>
-          <li className="md:hidden "> <CategoryMegaMenu /> </li>
-          <li className="border-b-2  hover:text-[#555050c0] duration-200 cursor-pointer">
+          <li > <CategoryMegaMenu /> </li>
+          <li className={`hover:text-[#555050c0] duration-200 cursor-pointer ${pathname.startsWith("/products") ? "border-b-2" : ""}`}>
             <Link href="/products">Products</Link>
           </li>
         </ul>
